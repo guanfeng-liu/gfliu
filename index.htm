@@ -2,11 +2,107 @@
 <!-- saved from url=(0035)http://web.science.mq.edu.au/~gliu/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
+
+
+
+
   <title>Guanfeng Liu's Homepage</title> 
   <style type="text/css">
 
+/* Ensure no margins/paddings on body to remove all space */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Flex container to align bio photo + icons on the left and text on the right */
+#profile_container {
+    display: flex;
+    align-items: flex-start; /* Aligns both sections to the top */
+    gap: 40px; /* Space between photo+icons and profile text */
+    max-width: 900px; /* Adjust based on your layout */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+/* Left Section: Bio Photo + Social Icons */
+#bio_container {
+    display: flex;
+    flex-direction: column; /* Stacks photo and icons vertically */
+    align-items: flex-start; /* Aligns to the left */
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+/* Wrapper to keep the photo and icons together */
+.photo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Profile Photo */
+#bio_photo {
+    width: 300px; /* Increased photo size */
+    border-radius: 0; /* No rounded corners */
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: block; /* Ensures it aligns properly */
+}
+
+/* Social Icons - Now correctly positioned below the photo */
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center icons below the image */
+    gap: 15px; /* Even spacing between icons */
+    margin-top: 10px; /* Ensures they are just below the photo */
+    width: 100%; /* Matches the width of the photo */
+}
+
+/* Social Icon Styling */
+.social-icon {
+    font-size: 32px;  /* 20% smaller than previous */
+    color: #0077B5;  /* Default blue */
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out; /* Smooth animation */
+}
+
+/* Hover Effects */
+.social-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    color: #004182; /* Darker blue on hover */
+}
+
+/* Individual Icon Colors */
+.social-icon:nth-child(1) { color: #4285F4; } /* Google Scholar */
+.social-icon:nth-child(2) { color: #0077B5; } /* LinkedIn */
+.social-icon:nth-child(3) { color: #A6CE39; } /* ORCID */
+.social-icon:nth-child(1):hover { color: #0057E7; } /* Google Scholar Darker */
+.social-icon:nth-child(2):hover { color: #004182; } /* LinkedIn Darker */
+.social-icon:nth-child(3):hover { color: #468847; } /* ORCID Darker */
+
+/* DBLP Logo Styling */
+.dblp-icon img {
+    width: 32px; /* Adjust DBLP icon size */
+    height: 32px;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* DBLP Hover Effect */
+.dblp-icon img:hover {
+    transform: scale(1.1); /* Slight zoom */
+    filter: brightness(0.8); /* Darker effect on hover */
+}
+
+
 
 body {
+
+
+
+
+
 overflow: auto;
 font-family: Times New Roman;
 position:absolute;
@@ -35,35 +131,65 @@ line-height: 100%;
 
 </style></head>
   
+<!-- Include Font Awesome for other icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
+<div id="wrapper">
+    
+    <!-- Flex container to align photo + icons on the left and text on the right -->
+    <div id="profile_container">
+        
+        <!-- Left Section: Bio Photo & Social Icons -->
+        <div id="bio_container">
+            <div class="photo-wrapper">
+                <img id="bio_photo" src="./gfliu/MQ-liu-2024.jpg" alt="Your Photo">
+                
+                <!-- Social Icons Below the Photo -->
+                <div class="social-icons">
+                    <a href="https://scholar.google.com.au/citations?user=6P6EnQkAAAAJ&hl=en" target="_blank" class="social-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/guanfeng-liu-41678837/" target="_blank" class="social-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://orcid.org/0000-0001-8980-4950" target="_blank" class="social-icon">
+                        <i class="fab fa-orcid"></i>
+                    </a>
+                    <a href="https://dblp.org/pid/01/1235-1.html" target="_blank" class="social-icon dblp-icon">
+                        <img src="./gfliu/DBLP.png" alt="DBLP Logo">
+                    </a>
+                </div>
+            </div>
+        </div>
 
-<body id="main" data-new-gr-c-s-check-loaded="14.993.0" data-gr-ext-installed="">
-<div id="wrapper" style="overflow: auto;">
-	<div id="bio_photo"><img style="border: 1px solid white; float: left; margin-left:1px;" src="./gfliu/MQ-liu-2024.jpg" height="300" align="left"></div>
-<div id="profile" syple="float: left; margin-left:30px">
-<span class="mh" style="font-family: Times New Roman;
-font-size: 180%;
-line-height: 180%;">A/Prof. Guanfeng Liu (PhD)</span><br>
-			
+        <!-- Right Section: Profile Text -->
+        <div id="profile">
+            <span class="mh">A/Prof. Guanfeng Liu (PhD)</span><br>
             <span>Associate Professor (Professor in North America)</span><br>
-            <span>Course Director for Stream <a href="https://www.mq.edu.au/study/find-a-course/courses/master-of-data-science">"Data Science"</span><br></a>
-            <span>Deputy Director of <a href="https://www.mq.edu.au/study/find-a-course/courses/bachelor-of-philosophy-master-of-research-science-and-engineering">Master by Research</span><br></a>
-			<span>IEEE Senior Member</span><br>
-            <span> <a href="https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing">School of Computing</a> </span><br>
-            <span> <a href="http://www.mq.edu.au/">Macquarie University</a> </span><br>
-            <span> Sydney, Australia, 2109</span><br>
+            <span>Course Director for Stream <a href="https://www.mq.edu.au/study/find-a-course/courses/master-of-data-science">"Data Science"</a></span><br>
+            <span>Deputy Director of <a href="https://www.mq.edu.au/study/find-a-course/courses/bachelor-of-philosophy-master-of-research-science-and-engineering">Master by Research</a></span><br>
+            <span>IEEE Senior Member</span><br>
+            <span><a href="https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing">School of Computing</a></span><br>
+            <span><a href="http://www.mq.edu.au/">Macquarie University</a></span><br>
+            <span>Sydney, Australia, 2109</span><br>
             <br>
-            
-            <span> Office: BD Building, Level 3</span><br>
-            <span> Email: guanfeng.liu [at] mq.edu.au </span><br>
-            <span> Tel: +61-2-9850-9542 </span><br>
-            <span> Fax: +61-2-9850-9551 </span><br>
+            <span>Office: BD Building, Level 3</span><br>
+            <span>Email: guanfeng.liu [at] mq.edu.au</span><br>
+            <span>Tel: +61-2-9850-9542</span><br>
+            <span>Fax: +61-2-9850-9551</span><br>
+        </div>
+
+    </div>
+
 </div>
-</div>
+
+
+
+
 <hr style="height: 3px;"> <br>
 <div id="description">
 <span style="font-size:110%">
-Dr. Guanfeng Liu is an Associate Professor in <a href="https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing"> School of Computing, </a> <a href="http://www.mq.edu.au/"> Macquarie University,</a> Sydney, Australia. Guanfeng got his PhD in computer science from Macquarie University in 2013. His research interests include graph database, graph neural network, and graph data mining. He has published more than 100 papers on international journals and conferences including, IEEE Transactionson Knowledge and Data Engineering, IEEE
+Dr. Guanfeng Liu is an Associate Professor in <a href="https://www.mq.edu.au/faculty-of-science-and-engineering/departments-and-schools/school-of-computing"> School of Computing, </a> <a href="http://www.mq.edu.au/"> Macquarie University,</a> Sydney, Australia. His research interests include graph database, graph neural network, and graph data mining. He has published more than 100 papers on international journals and conferences including, IEEE Transactionson Knowledge and Data Engineering, IEEE
 Transactions on Services Computing, IEEE Transactions on Emerging Topics in Computational Intelligence, ACM Transactions on the Web, ACM Transactions on Data Science, SIGIR, ICDE, WWW, IJCAI, AAAI and CIKM, etc.
  </span>
 </div>
@@ -73,21 +199,22 @@ Transactions on Services Computing, IEEE Transactions on Emerging Topics in Comp
 
 
 <div id="Research Interests">
-	<span class="sb">Research Interests and Projects</span><br>
+	<span class="sb">Research Interests and Topics</span><br>
 	<ul>
-	 <li><font color="red" ,="" size="4.7">Health Data Analystics</font> </li>
+	 <li><font color="red" ,="" size="4.7">AI-Powered Medical Data Analytics</font> </li>
 	  <ul>
 	  	
-	  	<li>Abstract: This project aims to develop a comprehensive health data analytics platform which utilizes data science and data analytics techniques to enhance various aspects of healthcare.</li>
-	  	<li>Research Skills: Neutral Language Processing, Graph Database, and Graph Data Mining</li>
+	  	<li><b>Abstract:</b> This research aims to develop an advanced <b>AI-driven medical data analytics</b> platform that leverages cutting-edge data science and analytics techniques to improve healthcare decision-making, patient outcomes, and operational efficiency. By integrating machine learning, graph data mining, and predictive modeling, the platform will enable efficient extraction, analysis, and visualization of complex medical data.</li>
+	  	<li><b>Research Areas:</b> Predictive Modeling, Graph Databases, Graph Data Mining, Machine Learning, Healthcare Data Analytics</li>
 	  	<!--<li>Collaborators: <a href='http://www.iflytek.com/en/index.html'>IFLYTEC</a>, and <a href='http://www.monash.edu.au'>Monash University</a></li>-->
 	  </ul>
+	  <br>
 
-	 <li><font color="red" ,="" size="4.7">Social Network Based Recommendation</font></li>
+	 <li><font color="red" ,="" size="4.7">Trustworthy AI: Ensuring Reliability, Fairness, and Transparency</font></li>
 	 <ul>
 
-	  <li>Abstract: Using social contexts, like social relationships and social positions to build up comprehensive profiles for recommendations.</li>
-	  	<li>Research Skills: Data Mining, and Machine Learning</li>
+	  <li><b>Abstract:</b> This research aims to develop robust methodologies for building trustworthy AI systems that prioritize reliability, fairness, transparency, and security. By integrating techniques such as explainable AI (XAI), bias mitigation, adversarial robustness, and ethical AI frameworks, the research will address critical challenges in ensuring AI models are interpretable, unbiased, and secure across various applications, including healthcare, finance, and cybersecurity.</li>
+	  	<li><b>Research Areas:</b> Explainable AI, Fairness in AI, Adversarial Robustness, Ethical AI, Secure Machine Learning, Trustworthy Data Analytics</li>
 	  	<!--<li>Collaborators: <a href='http://www.uq.edu.au'>UQ</a>, <a href='http://www.uestc.edu.cn'>UESTC</a>, and <a href='http://www.alibaba.com'>Alibaba</a></li>-->
 	  </ul>
 
@@ -108,7 +235,10 @@ Transactions on Services Computing, IEEE Transactions on Emerging Topics in Comp
 
 <ul>
 
-<li>01/2025: I have been invited to serve as an <b>Editoral Board Member</b> for <b><a href="https://www.nature.com/srep/">Scientific Reports</a></b> (JCR Q1)</li>
+<li>02/2025: We are organizing a special issue, <b>"AI4Tech - AI Advancing Critical Technologies"</b>, in International Journal of Data Science and Analytics (JDSA, SCI IF=3.4, Q2), <a href="https://link.springer.com/collections/dfddbajeai">Call for Paper is online</a> (Due: 31/12/2025).
+
+
+<li>01/2025: I have been invited to serve as an <b>Editoral Board Member</b> for <a href="https://www.nature.com/srep/">Scientific Reports</a> (JCR Q1)</li>
 
 <li>01/2025: I have been invited to serve as an <b>Area Chair</b> for <b>KDD 2025</b> (one of the flagship data mining conferences, CORE A*, CCF A)</li>
 
@@ -278,8 +408,10 @@ Transactions on Services Computing, IEEE Transactions on Emerging Topics in Comp
 	<ol>
 
 
+<Li>P. Ding, Y. Wang, G. Liu, N. Wang and Z. Zhou, <b>Few-Shot Causal Representation Learning for Out-of-Distribution Generalization on Heterogeneous Graphs</b>, <i>IEEE Transactions on Knowledge and Data Engineering (TKDE)</i> (accepted in 2025).</li>
 
-<Li>P. Ding, Y. Wang, G. Liu, N. Wang and Z. Zhou, <b>Few-Shot Causal Representation Learning for Out-of-Distribution Generalization on Heterogeneous Graphs</b>, <i>IEEE Transactions on Knowledge and Data Engineering (TKDE),</i> (accepted in 2025).</li>
+
+<li>Y. Lei, L. Shen, Z. Sun, T. He, S. Feng and G.Liu, <b>COSTA: Contrastive Spatial and Temporal Debiasing Framework for Next POI Recommendation</b>, <i>Neural Networks</i> (accepted in 2025)
 
 <Li> G. Liu, L. Li, G. Liu and X. Wu, <b>Size-fixed Group Discovery via Multi-Constrained Graph Pattern Matching</b>, <i>Information Sciences</i>, Vol. 690, 2025.
 
